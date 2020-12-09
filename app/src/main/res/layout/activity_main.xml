@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:src="@drawable/fieldbuzz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="25dp">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_below="@+id/logoImage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:hint="E-mail"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress">
+
+    </EditText>
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_below="@+id/emailField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:hint="Password"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_below="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Login"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:textAlignment="center">
+
+    </Button>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+
+</RelativeLayout>

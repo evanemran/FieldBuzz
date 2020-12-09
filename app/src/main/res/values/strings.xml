@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Field Buzz</string>
+
+    <string-array name="choice">
+        <item>Choose Department</item>
+        <item>Mobile</item>
+        <item>Backend</item>
+    </string-array>
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity">
+
+    <RelativeLayout
+        android:id="@+id/labelContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/logoImage_form"
+            android:src="@drawable/fieldbuzz"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_below="@+id/logoImage_form"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:layout_margin="15dp"
+            android:maxLength="256"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_below="@+id/nameField"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:layout_margin="15dp"
+            android:maxLength="256"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/phoneField"
+            android:layout_below="@+id/emailField"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:layout_margin="15dp"
+            android:maxLength="14"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/addressField"
+            android:layout_below="@+id/phoneField"
+            android:hint="Address"
+            android:maxLength="512"
+            android:inputType="textPostalAddress"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/universityField"
+            android:layout_below="@+id/addressField"
+            android:hint="University"
+            android:maxLength="256"
+            android:inputType="text"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/graduationField"
+            android:layout_below="@+id/universityField"
+            android:hint="Passing Year"
+            android:inputType="number"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/cgpaField"
+            android:layout_below="@+id/graduationField"
+            android:hint="CGPA"
+            android:inputType="numberDecimal"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/experienceField"
+            android:layout_below="@+id/cgpaField"
+            android:hint="Experience (Month)"
+            android:inputType="number"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/currentWorkplaceField"
+            android:layout_below="@+id/experienceField"
+            android:hint="Current Workplace"
+            android:inputType="text"
+            android:maxLength="256"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <Spinner
+            android:id="@+id/applyingInField"
+            android:layout_below="@+id/currentWorkplaceField"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/expectedSalaryField"
+            android:layout_below="@+id/applyingInField"
+            android:hint="Expected Salary"
+            android:inputType="number"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/referenceField"
+            android:layout_below="@+id/expectedSalaryField"
+            android:hint="Reference"
+            android:layout_margin="15dp"
+            android:inputType="text"
+            android:maxLength="256"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <EditText
+            android:id="@+id/githubField"
+            android:layout_below="@+id/referenceField"
+            android:hint="Github link"
+            android:layout_margin="15dp"
+            android:inputType="text"
+            android:maxLength="512"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/cvArea"
+            android:orientation="horizontal"
+            android:layout_below="@+id/githubField"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_height="80dp">
+            <TextView
+                android:id="@+id/cvField"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Upload CV"
+                android:layout_margin="15dp"
+                android:textSize="15sp">
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/cvButton"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_width="60dp"
+                android:src="@drawable/ic_upload"
+                android:layout_height="60dp"
+                android:layout_weight="1">
+
+            </ImageButton>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_below="@+id/cvArea"
+            android:text="Send"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </RelativeLayout>
+
+</ScrollView>
