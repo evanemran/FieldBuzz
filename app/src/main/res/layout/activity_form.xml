@@ -197,6 +197,14 @@
             android:layout_height="wrap_content">
 
         </Button>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        </ProgressBar>
 
     </RelativeLayout>
 

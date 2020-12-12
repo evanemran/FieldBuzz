@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 if (!fieldEmail.getText().toString().isEmpty() && !fieldPass.getText().toString().isEmpty())
                 {
                     progressBar.setVisibility(View.VISIBLE);
+                    fieldEmail.setEnabled(false);
+                    fieldPass.setEnabled(false);
+                    btnLogin.setEnabled(false);
                     authenticate();
                 }
                 else
@@ -68,15 +71,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 progressBar.setVisibility(View.INVISIBLE);
+                fieldEmail.setEnabled(true);
+                fieldPass.setEnabled(true);
+                btnLogin.setEnabled(true);
                 Toast.makeText(MainActivity.this, "Success!", Toast.LENGTH_SHORT).show();
                 String token = response.body().getToken();
                 Intent intent = new Intent(MainActivity.this, FormActivity.class);
+                intent.putExtra("auth_token", token);
                 startActivity(intent);
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 progressBar.setVisibility(View.INVISIBLE);
+                fieldEmail.setEnabled(true);
+                fieldPass.setEnabled(true);
+                btnLogin.setEnabled(true);
                 Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
 
             }
